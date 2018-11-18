@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
-#include <algorithm>
+#include <utility>
 
-struct NameAndGrade 
+struct NameAndGrade
 {
 	std::string studentName;
 	int grade;
 };
+
 
 void sortArray(NameAndGrade *nameAndGrade, int numStudents)
 {
@@ -51,6 +52,8 @@ int main()
 	{
 		std::cout << "\n" <<  nameAndGrade[i].studentName << " had a grade of " << nameAndGrade[i].grade;
 	}
+
+	delete[] nameAndGrade;
 
 	std::cin.ignore();
 	std::cin.get();
